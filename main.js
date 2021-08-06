@@ -1,3 +1,4 @@
+//app.use(express.static(__dirname + '/public'));
 import './style.css';
 //import * as THREE from 'three';
 import * as THREE from 'https://threejs.org/build/three.module.js';
@@ -99,3 +100,4 @@ function animate(){
 
 animate();
 console.log("finished animation");
+document.body.appendChild(renderer.domElement);
