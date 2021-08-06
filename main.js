@@ -6,6 +6,7 @@ import * as THREE from 'https://threejs.org/build/three.module.js';
 import {OrbitControls} from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 
 //setup
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -20,7 +21,7 @@ camera.position.setZ(30);
 
 renderer.render(scene, camera);
 
-
+console.log("finished setup");
 //Geometry and Materials
 const geometry = new THREE.TorusGeometry(10,1,16,100);
 const material = new THREE.MeshStandardMaterial( {color: 0x03c2fc} );
@@ -40,6 +41,7 @@ const jupiter = new THREE.Mesh(
 
 scene.add(jupiter);
 
+console.log("finished Geo");
 //Lighting
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(25,25,25);
@@ -50,6 +52,7 @@ const ambientLight =  new THREE.AmbientLight(0xffffff);
 
 scene.add(ambientLight);
 
+console.log("finished lighting");
 //Helpers
 const lightHelper = new THREE.PointLightHelper(pointLight);
 const gridHelper = new THREE.GridHelper(200, 50);
@@ -57,6 +60,7 @@ const gridHelper = new THREE.GridHelper(200, 50);
 //scene.add(gridHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
+
 
 //AddStars
 function addStar(){
@@ -71,11 +75,13 @@ function addStar(){
 
 Array(200).fill().forEach(addStar);
 
+console.log("finished stars");
 //Background
 const spaceTexture = new THREE.TextureLoader().load('galaxy.jpg');
 scene.background = spaceTexture;
 
 
+console.log("finished background");
 //Animation
 function animate(){
   requestAnimationFrame(animate);
@@ -92,3 +98,4 @@ function animate(){
 
 
 animate();
+console.log("finished animation");
