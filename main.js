@@ -1,5 +1,5 @@
 //app.use(express.static(__dirname + '/public'));
-import 'https://mp17017.github.io/MyPortfolio/style.css';
+import './main.css';
 //import * as THREE from 'three';
 import * as THREE from 'https://threejs.org/build/three.module.js';
 //import { BlendingEquation } from 'three';
