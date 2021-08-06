@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview",
+    "homepage": "https://mp17017.github.io/MyPortfolio"
   },
   "devDependencies": {
     "vite": "^2.4.4"
