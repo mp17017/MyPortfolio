@@ -1,5 +1,5 @@
 //app.use(express.static(__dirname + '/public'));
-import 'style.css';
+import '3dPortfolio\dist\style.css';
 //import * as THREE from 'three';
 import * as THREE from 'https://threejs.org/build/three.module.js';
 //import { BlendingEquation } from 'three';
