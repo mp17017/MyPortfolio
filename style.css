@@ -21,7 +21,6 @@ canvas {
   width: var(--panel-width);
   height: 100%;
   overflow: auto;
-  border-right: var(--border-style);
   display: flex;
   flex-direction: column;
   transition: 0s 0s height;
@@ -65,10 +64,10 @@ iframe{
   background-color: rgb(78, 23, 165);
   color: white;
   border-color: black;
-  block-size:40px;
+  min-height: 20%;
   border-width: 3px;
   border-style: bevel;
-  column-width: 130px;
+  width: 40%;
 }
 
 
