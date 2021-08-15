@@ -9,7 +9,7 @@
     
   </head>
   <body>
-    <canvas id='bg' style="display: block; top:0; left:0px; position: fixed;"></canvas>
+    <canvas id='bg' style="display: block; top:0; left:0px; position: fixed; height:100%; width:100%"></canvas>
 
     <div id="panel">
       <div id="header"> 
@@ -21,20 +21,88 @@
       </div>
       <div >
         <br>
-        <button id="buttons" type="button">About Me</button><br><br>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">About Me</button><br><br>
       </div>
 
       <div id="header2">Display Project</div>
       
-      <div >
+      <div>
         <br>
-        <button id="buttons" type="button">Project 1</button><br><br>
-        <button id="buttons" type="button">Project 2</button><br><br>
-        <button id="buttons" type="button">Project 3</button><br><br>
-        <button id="buttons" type="button">Project 4</button><br><br>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Ionic App</button><br><br>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">GSU App</button><br><br>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Project 3</button><br><br>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Project 4</button><br><br>
       </div>
     </div>
+        <div id="oframe0" style="display:none;">
+          <h1>Hi</h1>
+        </div>
+        <div id="oframe1" style="display:none;">
+          <iframe src="https://mp17017.github.io/scheduling-application/" title="Ionic App" ></iframe> 
+        </div>
+        <div id="oframe2" style="display:none;">
+          <iframe src="https://mp17017.github.io/gsu-frontend/" title="GSU App" ></iframe> 
+        </div>
+        <div id="oframe3" style="display:none;">
+          <iframe src="https://mp17017.github.io/scheduling-application/" title="Scheduling Application" ></iframe> 
+        </div>
+        <div id="oframe4" style="display:none;">
+          <iframe src="https://mp17017.github.io/scheduling-application/" title="Scheduling Application" ></iframe> 
+        </div>
 
+
+        
+    
+    <script type="text/javascript">
+      function buttonsHandler(evt){
+        var of0 = document.getElementById("oframe0");
+        var of1 = document.getElementById("oframe1");
+        var of2 = document.getElementById("oframe2");
+        var of3 = document.getElementById("oframe3");
+        var of4 = document.getElementById("oframe4");
+
+        if(evt.textContent == "About Me"){
+          if(of0.style.display === "none"){
+            of0.style.display = "flex";
+          }
+          else{
+            of0.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Ionic App"){
+          if(of1.style.display === "none"){
+            of1.style.display = "flex";
+          }
+          else{
+            of1.style.display = "none";
+          }
+      }
+        if(evt.textContent == "GSU App"){
+          if(of2.style.display === "none"){
+            of2.style.display = "flex";
+          }
+          else{
+            of2.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Project 3"){
+          if(of3.style.display === "none"){
+            of3.style.display = "flex";
+          }
+          else{
+            of3.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Project 4"){
+          if(of4.style.display === "none"){
+            of4.style.display = "flex";
+          }
+          else{
+            of4.style.display = "none";
+          }
+      }
+    }
+    </script>
 		<script type="module" src="main.js" defer></script>
     
   </body>
