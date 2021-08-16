@@ -41,7 +41,7 @@ canvas {
     width: 95%;
     height: 81%;
     overflow: auto;
-    display: flex;
+    display:block;
     transition: 0s 0s height;
     border-radius: 0px;
     border-color: black;
