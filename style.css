@@ -4,14 +4,119 @@ canvas {
   left: 0;
 }
 
+@media only screen and (max-width: 601px) {
 
 :root {
-  --panel-width: 15%;
+  --panel-width: 100%;
   --font-size: 18px;
   --line-height: 28px;
   --header-height: 56px;
   --icon-size: 24px;
 }
+  #panel {
+    position: fixed;
+    z-index: 2;
+    left: 0px;
+    top: 0%;
+    width: var(--panel-width);
+    height: 15%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    transition: 0s 0s height;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+  }
+  
+  #oframe0, #oframe1, #oframe2, #oframe3, #oframe4{
+    position: fixed;
+    z-index: 1;
+    left: 0%;
+    top: 15%;
+    width: 100%;
+    height: 85%;
+    overflow: auto;
+    display: flex;
+    transition: 0s 0s height;
+    border-radius: 0px;
+    border-color: black;
+    background-color: white;
+    border-style: solid;
+    text-align: center;
+  }
+  iframe{
+    width:100%;
+  }
+  
+  #header {
+    color: rgb(255, 255, 255);
+    font-size:0%;
+  }
+  #header2 {
+    color: rgb(255, 255, 255);
+    font-size:100%;
+    writing-mode: sideways-lr;
+    line-height: 200%;
+    margin-left:2%;    
+  }
+
+  #buttons1{
+    background-color: rgb(78, 23, 165);
+    color: white;
+    border-color: black;
+    height:70%;
+    border-width: 3px;
+    border-style: bevel;
+    width: 100%;
+    margin-top:20%;   
+  }
+
+  #buttonContainer{
+    
+    width:100%;
+    height:100%;
+    align-content: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  #buttons{
+    background-color: rgb(78, 23, 165);
+    color: white;
+    border-color: black;
+    height:70%;
+    border-width: 3px;
+    border-style: bevel;
+    width: 10%;
+    top: 50%;
+    margin-left:5%;
+    margin-top:2%;   
+
+  }
+  hr{
+    height: 0px;
+    background-color: #ccc;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  :root {
+    --panel-width: 15%;
+    --font-size: 18px;
+    --line-height: 28px;
+    --header-height: 56px;
+    --icon-size: 24px;
+  }
 
 #panel {
   position: fixed;
@@ -54,26 +159,47 @@ iframe{
 #header {
   color: rgb(255, 255, 255);
   font-size:18px;
+  
 }
 #header2 {
   color: rgb(255, 255, 255);
   font-size:125%;
+  margin-top:15%;
+}
+
+#buttons1{
+  background-color: rgb(78, 23, 165);
+  color: white;
+  border-color: black;
+  height:70%;
+  border-width: 3px;
+  border-style: bevel;
+  width: 50%;
+}
+
+#buttonContainer{
+  width:100%;
+  height:100%;
+  text-align: center;
+  
 }
 
 #buttons{
   background-color: rgb(78, 23, 165);
   color: white;
   border-color: black;
-  min-height: 20%;
+  height: 10%;
   border-width: 3px;
   border-style: bevel;
-  width: 40%;
+  width: 50%;
+  margin-top:10%;
 }
-
-
 hr{
   height: 1px;
   background-color: #ccc;
   border: none;
 }
+}
+
+
 
