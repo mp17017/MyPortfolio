@@ -36,10 +36,10 @@ canvas {
   #oframe0, #oframe1, #oframe2, #oframe3, #oframe4{
     position: fixed;
     z-index: 1;
-    left: 0%;
-    top: 15%;
-    width: 100%;
-    height: 85%;
+    left: 2%;
+    top: 17%;
+    width: 95%;
+    height: 81%;
     overflow: auto;
     display: flex;
     transition: 0s 0s height;
