@@ -17,7 +17,7 @@ canvas {
 }
   #panel {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     left: 0px;
     top: 0%;
     width: var(--panel-width);
@@ -50,7 +50,7 @@ canvas {
     text-align: center;
   }
   iframe{
-    width:100%;
+    width:100vw;
   }
   
   #header {
@@ -74,6 +74,7 @@ canvas {
     border-style: bevel;
     width: 14vw;
     margin-top:0vh;   
+    z-index: 2;
   }
 
   #buttonContainer{
