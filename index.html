@@ -3,12 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     
   </head>
   <body>
-    <canvas id='bg' style="display: block; top:0; left:0; position: fixed;"></canvas>
-		<script type='module' src="main.js"></script>
+    <canvas id='bg' style="display: block; top:0; left:0px; position: fixed; height:100%; width:100%"></canvas>
+
+    <div id="panel">
+      <div id="header"> 
+        <h1>Michael Perry</h1>
+        <p>🚀 Welcome to my website!</p>
+      </div>
+      <div>
+        <hr>
+      </div>
+      <div >
+        <button id="buttons1" type="button" onClick="buttonsHandler(this)" >About Me</button><br><br>
+      </div>
+
+      <div id="header2">Display Project</div>
+      
+      <div id="buttonContainer">
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Ionic App</button>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">GSU App</button>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Project 3</button>
+        <button id="buttons" type="button" onClick="buttonsHandler(this)">Project 4</button>
+      </div>
+    </div>
+        <div id="oframe0" style="display:none;">
+          <h1>Howdy!</h1>
+          <p>First off, thanks for viewing my portfolio.</p>
+          <p>I am a highly motivated software engineer with a strong foundation in Java (Spring Boot), JavaScript React, PHP, SQL, and Python with a passing knowledge of AWS. I am passionate about all things tech related and am eager to contribute my enthusiasm and ability to rapidly learn new technologies at a mission-driven organization. I am seeking full-time employment opportunities with an interest in software engineering.</p>
+        </div>
+        <div id="oframe1" style="display:none;">
+          <iframe src="https://mp17017.github.io/scheduling-application/" title="Ionic App" ></iframe> 
+        </div>
+        <div id="oframe2" style="display:none;">
+          <iframe src="https://mp17017.github.io/gsu-frontend/" title="GSU App" ></iframe> 
+        </div>
+        <div id="oframe3" style="display:none;">
+          <iframe src="" title="Scheduling Application" ></iframe> 
+        </div>
+        <div id="oframe4" style="display:none;">
+          <iframe src="" title="Scheduling Application" ></iframe> 
+        </div>
+
+
+        
+    
+    <script type="text/javascript">
+      function buttonsHandler(evt){
+        var of0 = document.getElementById("oframe0");
+        var of1 = document.getElementById("oframe1");
+        var of2 = document.getElementById("oframe2");
+        var of3 = document.getElementById("oframe3");
+        var of4 = document.getElementById("oframe4");
+        
+        if(evt.textContent == "About Me"){
+          disp = of0
+          if(disp.style.display === "none"){
+            disp.style.display = "block";
+          }
+          else{
+            disp.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Ionic App"){
+          if(of1.style.display === "none"){
+            of1.style.display = "flex";
+          }
+          else{
+            of1.style.display = "none";
+          }
+      }
+        if(evt.textContent == "GSU App"){
+          if(of2.style.display === "none"){
+            of2.style.display = "flex";
+          }
+          else{
+            of2.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Project 3"){
+          if(of3.style.display === "none"){
+            of3.style.display = "flex";
+          }
+          else{
+            of3.style.display = "none";
+          }
+      }
+        if(evt.textContent == "Project 4"){
+          if(of4.style.display === "none"){
+            of4.style.display = "flex";
+          }
+          else{
+            of4.style.display = "none";
+          }
+      }
+    }
+    </script>
+		<script type="module" src="main.js" defer></script>
+    
   </body>
 </html>

@@ -1,0 +1,206 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:100vh;
+  right:100vw;
+}
+
+@media only screen and (max-width: 601px) {
+
+:root {
+  --panel-width: 100vw;
+  --font-size: 18px;
+  --line-height: 28px;
+  --header-height: 56px;
+  --icon-size: 24px;
+}
+  #panel {
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0%;
+    width: var(--panel-width);
+    height: 15vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: 0s 0s height;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+  }
+  
+  #oframe0, #oframe1, #oframe2, #oframe3, #oframe4{
+    position: fixed;
+    z-index: 1;
+    left: 2%;
+    top: 17%;
+    width: 95%;
+    height: 81%;
+    overflow: auto;
+    display:block;
+    transition: 0s 0s height;
+    border-radius: 0px;
+    border-color: black;
+    background-color: white;
+    border-style: solid;
+    text-align: center;
+  }
+  iframe{
+    width:100%;
+  }
+  
+  #header {
+    color: rgb(255, 255, 255);
+    font-size:0%;
+  }
+  #header2 {
+    color: rgb(255, 255, 255);
+    font-size:0%;
+    writing-mode: sideways-lr;
+    line-height: 200%;
+    margin-left:2%;   
+  }
+
+  #buttons1{
+    background-color: rgb(78, 23, 165);
+    color: white;
+    border-color: black;
+    height:15vh;
+    border-width: 3px;
+    border-style: bevel;
+    width: 14vw;
+    margin-top:0vh;   
+    z-index: 2;
+  }
+
+  #buttonContainer{
+    
+    width:82vw;
+    height:15vh;
+    align-content: center;
+    margin: 0;
+    position: absolute;
+    top: 7vh;
+    left: 57vw;
+    transform: translate(-50%, -50%);
+    overflow: show;
+    
+  }
+  
+  #buttons{
+    background-color: rgb(78, 23, 165);
+    color: white;
+    border-color: black;
+    height:8vh;
+    border-width: 3px;
+    border-style: bevel;
+    width: 14vw;
+    top: 15vh;
+    margin-left:2vw;
+    margin-right:2vw;
+    margin-top:4vh;   
+
+  }
+  hr{
+    height: 0px;
+    background-color: #ccc;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  :root {
+    --panel-width: 15%;
+    --font-size: 18px;
+    --line-height: 28px;
+    --header-height: 56px;
+    --icon-size: 24px;
+  }
+
+#panel {
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: var(--panel-width);
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  transition: 0s 0s height;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+}
+
+#oframe0, #oframe1, #oframe2, #oframe3, #oframe4{
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 10%;
+  width: 50%;
+  height: 80%;
+  overflow: auto;
+  display: flex;
+  transition: 0s 0s height;
+  border-radius: 0px;
+  border-color: black;
+  background-color: white;
+  border-style: solid;
+  text-align: center;
+}
+iframe{
+  width:100%;
+}
+
+#header {
+  color: rgb(255, 255, 255);
+  font-size:18px;
+  
+}
+#header2 {
+  color: rgb(255, 255, 255);
+  font-size:125%;
+  margin-top:15%;
+}
+
+#buttons1{
+  background-color: rgb(78, 23, 165);
+  color: white;
+  border-color: black;
+  height:70%;
+  border-width: 3px;
+  border-style: bevel;
+  width: 50%;
+}
+
+#buttonContainer{
+  width:100%;
+  height:100%;
+  text-align: center;
+  
+}
+
+#buttons{
+  background-color: rgb(78, 23, 165);
+  color: white;
+  border-color: black;
+  height: 10%;
+  border-width: 3px;
+  border-style: bevel;
+  width: 50%;
+  margin-top:10%;
+}
+hr{
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+}
